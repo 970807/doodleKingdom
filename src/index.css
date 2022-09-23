@@ -28,3 +28,14 @@ body {
   font-weight: normal;
   color: #353a3f;
 }
+
+img {
+  vertical-align: top;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 15px;
+  box-sizing: border-box;
+}

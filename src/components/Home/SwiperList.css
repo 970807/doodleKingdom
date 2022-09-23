@@ -1,0 +1,22 @@
+.swiper-wrapper {
+  --swiper-navigation-color: rgba(255, 255, 255, 0.95);
+  margin-top: 4px;
+}
+
+.swiper-wrapper .swiper .swiper-button-prev,
+.swiper-wrapper .swiper .swiper-button-next {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.swiper-wrapper .swiper:hover .swiper-button-prev,
+.swiper-wrapper .swiper:hover .swiper-button-next {
+  opacity: 1;
+}
+
+.swiper-wrapper .swiper img {
+  border-radius: 4px;
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+}

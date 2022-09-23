@@ -5,9 +5,7 @@
 }
 
 .header-wrapper .container {
-  max-width: var(--max-width);
   height: 100%;
-  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;

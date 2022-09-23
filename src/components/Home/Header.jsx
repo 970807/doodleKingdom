@@ -6,7 +6,9 @@ export default function Header() {
     <div className="header-wrapper">
       <div className="container">
         <div className="left">
-          <div className="logo"></div>
+          <a href="https://www.gracg.com/" target="_blank" rel="noreferrer">
+            <div className="logo"></div>
+          </a>
           <ul className="link-list">
             <li className="item light">
               <i className="fa fa-mobile icon"></i>

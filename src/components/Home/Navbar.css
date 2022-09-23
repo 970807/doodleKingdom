@@ -3,10 +3,7 @@
 }
 
 .navbar .container {
-  max-width: var(--max-width);
   height: 50px;
-  margin: 0 auto;
-  display: flex;
 }
 
 .navbar .container .nav-list {
@@ -39,6 +36,7 @@
   margin-left: 26px;
   height: 100%;
   transform: translateY(14px);
+  z-index: 999;
 }
 
 .navbar .container .nav-list .nav-item.droppable .icon {
@@ -60,6 +58,7 @@
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-top: 2px solid #cc9966;
   padding: 8px 0;
+  z-index: 999;
 }
 
 .navbar

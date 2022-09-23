@@ -1,0 +1,32 @@
+.course-list-wrapper {
+  margin-top: 17px;
+  padding: 12px 0;
+}
+
+.course-list-wrapper .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-list-wrapper .item-box {
+  width: 274px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.course-list-wrapper .item-box img {
+  width: 100%;
+}
+
+.course-list-wrapper .item-box p {
+  height: 35px;
+  line-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0 10px;
+  color: #fff;
+  text-align: center;
+  background: #343a40;
+  box-shadow: 0 0.125rem 0.25rem rgb(0 0 0 / 8%);
+}
