@@ -10,6 +10,6 @@ app.use('/api', router)
 
 app.use(errorHandler())
 
-app.listen(3000, () => {
+app.listen(8888, () => {
   console.log('server is running successful!')
 })
