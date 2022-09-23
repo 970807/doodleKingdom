@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --max-width: 1200px;
+}
+
+ul {
+  list-style: none;
+}
+
+html,
+body {
+  font-size: 14px;
+  background-color: #fff;
+  font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei,
+    Hiragino Sans GB, Microsoft Sans Serif, WenQuanYi Micro Hei, sans-serif;
+  font-weight: normal;
+  color: #353a3f;
+}

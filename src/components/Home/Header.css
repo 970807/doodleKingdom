@@ -1,0 +1,103 @@
+.header-wrapper {
+  --text-light: #f8f9fa;
+  height: 55px;
+  background: #000;
+}
+
+.header-wrapper .container {
+  max-width: var(--max-width);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-wrapper .container .left {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper .container .left .logo {
+  margin-right: 44px;
+  width: 161.95px;
+  height: 26px;
+  background-image: url(../../assets/images/logo.png);
+  background-size: 100% 100%;
+  cursor: pointer;
+}
+
+.header-wrapper .container .left .link-list {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper .container .left .link-list .item {
+  display: flex;
+  align-items: center;
+  color: var(--text-light);
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.header-wrapper .container .left .link-list .item.light {
+  color: var(--text-light);
+  opacity: 1;
+}
+
+.header-wrapper .container .left .link-list .item:not(:last-child)::after {
+  content: '';
+  display: block;
+  height: 9px;
+  margin: 1.5px 14px 0;
+  border-right: 1px solid #aaa;
+  cursor: default;
+}
+
+.header-wrapper .container .left .link-list .item .icon {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.header-wrapper .container .left .link-list .item .text {
+  font-size: 13px;
+}
+
+.header-wrapper .container .right {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper .container .right .icon {
+  margin-right: 22px;
+  transform: translateY(-1px);
+  color: var(--text-light);
+  font-size: 16px;
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.header-wrapper .container .right .btns {
+  display: flex;
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.header-wrapper .container .right .btns .item {
+  display: flex;
+  align-items: center;
+}
+
+.header-wrapper .container .right .btns .item:not(:last-child)::after {
+  content: '';
+  display: block;
+  margin: 0 20px;
+  width: 1px;
+  height: 15px;
+  border-right: 1px solid #dee2e6;
+  opacity: 0.5;
+}
+
+.header-wrapper .container .right .btns .item span {
+  cursor: pointer;
+}
