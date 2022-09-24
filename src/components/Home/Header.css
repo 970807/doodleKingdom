@@ -55,6 +55,7 @@
 .header-wrapper .container .left .link-list .item .icon {
   font-size: 18px;
   margin-right: 6px;
+  transform: translateY(1px);
 }
 
 .header-wrapper .container .left .link-list .item .text {

@@ -1,0 +1,15 @@
+.recommend-wrapper .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recommend-wrapper .row .title {
+  color: #343a40;
+  font-weight: bolder;
+}
+
+.recommend-wrapper .list {
+  display: flex;
+  flex-wrap: wrap;
+}

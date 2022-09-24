@@ -5,17 +5,22 @@
 
 .course-list-wrapper .container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .course-list-wrapper .item-box {
-  width: 274px;
+  margin-bottom: 14px;
   border-radius: 4px;
   overflow: hidden;
 }
 
+.course-list-wrapper .item-box:not(:nth-child(4n + 1)) {
+  margin-left: 22px;
+}
+
 .course-list-wrapper .item-box img {
-  width: 100%;
+  width: 276px;
+  height: 132px;
 }
 
 .course-list-wrapper .item-box p {

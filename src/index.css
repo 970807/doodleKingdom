@@ -39,3 +39,25 @@ img {
   padding: 0 15px;
   box-sizing: border-box;
 }
+
+.icon_work_hot {
+  display: inline-block;
+  background-image: url(./assets/images/work_hot.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+}
+
+.icon_work_tuijian {
+  display: inline-block;
+  background-image: url(./assets/images/work_tuijian.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 22px;
+  width: 22px;
+  height: 22px;
+  border-radius: 100%;
+}

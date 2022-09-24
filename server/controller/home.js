@@ -146,6 +146,9 @@ function parseRecommendList(sourceHtml) {
             .text()
             .match(/(\d+)图/)?.[1] || null,
         avatarUrl: $(el).find('a>img.headimg').attr('src'),
+        linkUrl:
+          sourceWebUrl +
+          $(el).children().eq(0).children('a').eq(1).attr('href'),
         userId: $(el)
           .children()
           .eq(1)
@@ -217,7 +220,10 @@ function parseHotWorkList(sourceHtml) {
     .filter((idx, el) => {
       return getTitle(el) === '热门作品'
     })
-    .find('div>a')
+    .eq(0)
+    .children()
+    .eq(1)
+    .children('a')
     .map((idx, el) => {
       const temp = {
         id: $(el)
