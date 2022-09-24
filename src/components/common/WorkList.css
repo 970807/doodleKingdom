@@ -1,0 +1,14 @@
+.work-list-wrapper .list-item {
+  display: inline-block;
+  margin-left: 14.4px;
+  margin-bottom: 15px;
+}
+
+.work-list-wrapper .list-item:nth-child(6n + 1) {
+  margin-left: 0;
+}
+
+.work-list-wrapper .list-item img {
+  width: 183px;
+  height: 183px;
+}

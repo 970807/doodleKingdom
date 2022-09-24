@@ -1,5 +1,6 @@
 const axios = require('axios')
 const cheerio = require('cheerio')
+const { v4: uuidv4 } = require('uuid')
 const { sourceWebUrl } = require('../config/default.config')
 
 async function getData(req, res, next) {
@@ -74,9 +75,10 @@ function parseSwiperList(swiperElId, sourceHtml) {
   const res = $(`#${swiperElId}>.swiper-wrapper>.swiper-slide`)
     .map((idx, el) => {
       const temp = {
-        id: $(el)
-          .attr('onclick')
-          .match(/open\('.*id=(.+)&?'\)/)?.[1],
+        id:
+          $(el)
+            .attr('onclick')
+            .match(/open\('.*id=(.+)&?'\)/)?.[1] || uuidv4(),
         linkUrl: $(el)
           .attr('onclick')
           .match(/open\('(.+)'\)/)?.[1],
@@ -202,6 +204,7 @@ function parseRecentRecommendWorkList(sourceHtml) {
         id: $(el)
           .attr('href')
           .match(/\/view\/(.+)/)?.[1],
+        linkUrl: sourceWebUrl + $(el).attr('href'),
         imgUrl: $(el).find('div>img').eq(0).attr('src')
       }
       return temp
@@ -229,6 +232,7 @@ function parseHotWorkList(sourceHtml) {
         id: $(el)
           .attr('href')
           .match(/\/view\/(.+)/)?.[1],
+        linkUrl: sourceWebUrl + $(el).attr('href'),
         imgUrl: $(el).find('div>img').eq(0).attr('src')
       }
       return temp

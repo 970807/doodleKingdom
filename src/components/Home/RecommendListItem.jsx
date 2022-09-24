@@ -24,24 +24,27 @@ export default function RecommendListItem(props) {
       </div>
       <div className="info-box">
         <div className="row-1">
-          <div className="browse-count">5192</div>
-          <div className="fav-count">58</div>
-          <div className="comment-count">2</div>
-          <div className="pic-count">7图</div>
+          <div className="browse-count">{props.browseCount}</div>
+          <div className="fav-count">{props.favConut}</div>
+          <div className="comment-count">{props.commentCount}</div>
+          {props.pictureCount && (
+            <div className="pic-count">{props.pictureCount}图</div>
+          )}
         </div>
-        <div className="work-name">熊店村</div>
+        <div className="work-name">{props.title}</div>
         <div className="publish-info">
           <div className="left">
             <div
               className="avatar"
               style={{
-                background: `url(https://photo7n.gracg.com/2001349543_3_fbdf4d4c6c40228883d948a07ba33a85.png!50x50) no-repeat`,
-                backgroundSize: 'cover'
+                background: `url(${props.avatarUrl}) no-repeat`,
+                backgroundSize: 'contain'
               }}
             ></div>
-            <div className="nickname">周大西</div>
+            <div className="nickname">{props.nickname}</div>
+            {props.isAuth && <i className="icon-auth"></i>}
           </div>
-          <div className="right">3天前</div>
+          <div className="right">{props.publishDate}</div>
         </div>
       </div>
     </div>

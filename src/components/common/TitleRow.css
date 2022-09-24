@@ -1,0 +1,12 @@
+.title-row-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0 10px;
+}
+
+.title-row-wrapper .title {
+  color: #353a3f;
+  font-size: 16px;
+  font-weight: 700;
+}

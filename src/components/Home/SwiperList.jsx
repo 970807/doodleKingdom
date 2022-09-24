@@ -7,7 +7,7 @@ import './SwiperList.css'
 
 export default function SwiperList(props) {
   return (
-    <div className="swiper-wrapper">
+    <div className="swiper-wrapper" style={props.style}>
       <div className="container">
         <Swiper
           className="swiper"
