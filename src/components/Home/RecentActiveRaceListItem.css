@@ -1,0 +1,52 @@
+.recent-active-race-list-item {
+  margin-bottom: 20px;
+  width: 368px;
+  border: 1px solid rgba(225, 225, 225, 0.5);
+  box-sizing: border-box;
+}
+
+.recent-active-race-list-item:not(:nth-child(3n + 1)) {
+  margin-left: 33px;
+}
+
+.recent-active-race-list-item a {
+  display: block;
+  width: 100%;
+}
+.recent-active-race-list-item img {
+  width: 368px;
+  height: 221px;
+}
+
+.recent-active-race-list-item .title-row {
+  padding: 14px 0;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.recent-active-race-list-item .info-row {
+  display: flex;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(225, 225, 225, 0.5);
+}
+
+.recent-active-race-list-item .info-row .icon-gift {
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: url(../../assets/images/gift.png);
+  background-size: 100% 100%;
+}
+
+.recent-active-race-list-item .info-row > span:nth-of-type(1) {
+  color: #666;
+  margin: 0 7px;
+}
+
+.recent-active-race-list-item .info-row > span:nth-of-type(2) {
+  color: #dc3545;
+  font-weight: 700;
+}

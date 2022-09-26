@@ -1,0 +1,4 @@
+.recent-active-race-wrapper .list-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}

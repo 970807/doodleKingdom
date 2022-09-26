@@ -263,6 +263,7 @@ function parseRecentActiveRaceList(sourceHtml) {
           .attr('href')
           .match(/v=(.+)&?/)?.[1],
         imgUrl: $(el).find('a>img').eq(0).attr('src'),
+        linkUrl: sourceWebUrl + $(el).find('a').eq(0).attr('href'),
         title: $(el).find('a').eq(0).next().text(),
         awardScale: $(el)
           .find('a')
