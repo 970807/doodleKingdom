@@ -8,6 +8,8 @@ import RecentRecommendList from '../../components/home/RecentRecommendList'
 import RecentActiveRaceList from '../../components/home/RecentActiveRaceList'
 import HotWorkList from '../../components/home/HotWorkList'
 import RecentStartCourseList from '../../components/home/RecentStartCourseList'
+import FooterNav from '../../components/home/FooterNav'
+import CopyrightRow from '../../components/home/CopyrightRow'
 import getHomeData from '../../api/home'
 
 export default function Home() {
@@ -56,6 +58,8 @@ export default function Home() {
       <HotWorkList list={hotWorkList} />
       <RecentActiveRaceList list={recentActiveRaceList} />
       <RecentStartCourseList list={recentStartCourseList} />
+      <FooterNav />
+      <CopyrightRow />
     </div>
   )
 }

@@ -1,0 +1,18 @@
+.copyright-row {
+  color: #999;
+  font-size: 12px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.copyright-row span {
+  margin-right: 14px;
+}
+
+.copyright-row span a {
+  color: #1a1a1a;
+}
+
+.copyright-row span a:hover {
+  color: #777;
+}
