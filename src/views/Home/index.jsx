@@ -7,6 +7,7 @@ import RecommendList from '../../components/home/RecommendList'
 import RecentRecommendList from '../../components/home/RecentRecommendList'
 import RecentActiveRaceList from '../../components/home/RecentActiveRaceList'
 import HotWorkList from '../../components/home/HotWorkList'
+import RecentStartCourseList from '../../components/home/RecentStartCourseList'
 import getHomeData from '../../api/home'
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
   const [recentRecommendWorkList, setRecentRecommendWorkList] = useState([])
   const [hotWorkList, setHotWorkList] = useState([])
   const [recentActiveRaceList, setRecentActiveRaceList] = useState([])
+  const [recentStartCourseList, setRecentStartCourseList] = useState([])
 
   useEffect(() => {
     getHomeData().then((res) => {
@@ -28,7 +30,8 @@ export default function Home() {
         recommendList,
         recentRecommendWorkList,
         hotWorkList,
-        recentActiveRaceList
+        recentActiveRaceList,
+        recentStartCourseList
       } = res.data.data
       setSwiperList1(swiperList1)
       setSwiperList2(swiperList2)
@@ -37,6 +40,7 @@ export default function Home() {
       setRecentRecommendWorkList(recentRecommendWorkList)
       setHotWorkList(hotWorkList)
       setRecentActiveRaceList(recentActiveRaceList)
+      setRecentStartCourseList(recentStartCourseList)
     })
   }, [])
 
@@ -51,6 +55,7 @@ export default function Home() {
       <RecentRecommendList list={recentRecommendWorkList} />
       <HotWorkList list={hotWorkList} />
       <RecentActiveRaceList list={recentActiveRaceList} />
+      <RecentStartCourseList list={recentStartCourseList} />
     </div>
   )
 }

@@ -1,0 +1,18 @@
+.recent-start-course-wrapper ul {
+  display: flex;
+}
+
+.recent-start-course-wrapper ul li {
+  margin-right: 30px;
+  margin-bottom: 14px;
+}
+
+.recent-start-course-wrapper ul li:nth-child(4n) {
+  margin-right: 0;
+}
+
+.recent-start-course-wrapper ul li a img {
+  width: 270px;
+  height: 164px;
+  object-fit: cover;
+}

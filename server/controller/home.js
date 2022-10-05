@@ -300,6 +300,7 @@ function parseRecentStartCourseList(sourceHtml) {
         id: $(el)
           .attr('href')
           .match(/id=(.+)&?/)?.[1],
+        linkUrl: $(el).attr('href'),
         imgUrl: $(el)
           .attr('style')
           .match(/url\((.+)\)/)?.[1]
