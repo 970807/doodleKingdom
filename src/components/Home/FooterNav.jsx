@@ -83,9 +83,9 @@ const qrCodeData = [
   }
 ]
 
-export default function Footer() {
+export default function FooterNav() {
   return (
-    <div class="footer-nav-wrapper">
+    <div className="footer-nav-wrapper">
       <div className="container">
         <div className="left">
           {listData.map((item1) => (
