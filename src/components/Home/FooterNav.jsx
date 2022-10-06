@@ -1,5 +1,9 @@
-import React from 'react'
+import React, { useState, Suspense } from 'react'
 import './FooterNav.css'
+
+const DialogQrCodeViewer = React.lazy(() =>
+  import('../common/DialogQrCodeViewer')
+)
 
 const listData = [
   {
@@ -84,36 +88,64 @@ const qrCodeData = [
 ]
 
 export default function FooterNav() {
+  const [isShowDialogImageViewer, setIsShowDialogQrCodeViewer] = useState(false)
+  const [dialogQrCodeViewerData, setdialogQrCodeViewerData] = useState(null)
+
+  const onQrCodeBoxClick = (info) => {
+    const { imgUrl, name: title } = info
+    setdialogQrCodeViewerData({ imgUrl, title })
+    setIsShowDialogQrCodeViewer(true)
+  }
+
+  const closeDialogQrCode = () => {
+    setdialogQrCodeViewerData(null)
+    setIsShowDialogQrCodeViewer(false)
+  }
+
   return (
-    <div className="footer-nav-wrapper">
-      <div className="container">
-        <div className="left">
-          {listData.map((item1) => (
-            <div className="list-box" key={item1.title}>
-              <p className="title">{item1.title}</p>
-              {item1.list.map((item2) => (
-                <a
-                  className="list-item"
-                  key={item2.name}
-                  href={item2.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {item2.name}
-                </a>
-              ))}
-            </div>
-          ))}
-        </div>
-        <div className="right">
-          {qrCodeData.map((item) => (
-            <div className="qr-code-box" key={item.name}>
-              <img src={item.imgUrl} alt="" />
-              <p>{item.name}</p>
-            </div>
-          ))}
+    <>
+      <div className="footer-nav-wrapper">
+        <div className="container">
+          <div className="left">
+            {listData.map((item1) => (
+              <div className="list-box" key={item1.title}>
+                <p className="title">{item1.title}</p>
+                {item1.list.map((item2) => (
+                  <a
+                    className="list-item"
+                    key={item2.name}
+                    href={item2.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    {item2.name}
+                  </a>
+                ))}
+              </div>
+            ))}
+          </div>
+          <div className="right">
+            {qrCodeData.map((item) => (
+              <div
+                className="qr-code-box"
+                key={item.name}
+                onClick={() => onQrCodeBoxClick(item)}
+              >
+                <img src={item.imgUrl} alt="" />
+                <p>{item.name}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+      {isShowDialogImageViewer && (
+        <Suspense fallback={<div>Loading</div>}>
+          <DialogQrCodeViewer
+            {...dialogQrCodeViewerData}
+            onMaskClick={closeDialogQrCode}
+          />
+        </Suspense>
+      )}
+    </>
   )
 }

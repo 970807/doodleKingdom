@@ -21,6 +21,7 @@ a:active {
 
 html,
 body {
+  min-width: var(--max-width);
   font-size: 14px;
   background-color: #fff;
   font-family: PingFang SC, Verdana, Helvetica Neue, Microsoft Yahei,
