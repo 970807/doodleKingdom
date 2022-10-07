@@ -1,27 +1,24 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './RecommendListItem.css'
 
 export default function RecommendListItem(props) {
-  const goWorkDetail = (url) => {
-    window.open(url, '_blank')
-  }
-
   return (
     <div className="recommend-list-item">
-      <div
+      <Link
         className="image-box"
         style={{
           background: `url(${props.coverUrl}) no-repeat center`,
           backgroundSize: 'cover'
         }}
-        onClick={() => goWorkDetail(props.linkUrl)}
+        to={`/work/${props.id}`}
       >
         <div className="icons-wrapper">
           {props.isHot && <i className="icon_work_hot"></i>}
           {props.isRecommend && <i className="icon_work_tuijian"></i>}
         </div>
         <div className="search-btn"></div>
-      </div>
+      </Link>
       <div className="info-box">
         <div className="row-1">
           <div className="browse-count">{props.browseCount}</div>

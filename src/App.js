@@ -1,10 +1,15 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './views/Home'
+import Work from './views/Work'
 
 function App() {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work/:id" element={<Work />} />
+      </Routes>
+    </Router>
   )
 }
 

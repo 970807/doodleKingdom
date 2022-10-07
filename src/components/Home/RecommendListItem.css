@@ -7,6 +7,7 @@
 }
 
 .recommend-list-item .image-box {
+  display: block;
   width: 274px;
   height: 274px;
   cursor: pointer;
